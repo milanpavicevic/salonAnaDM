@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Ana_usluge {
 	public static final String usluge = "//a[@class='sf-with-ul']//span[contains(text(),'Usluge')]";
+	public static final String meniFrizer = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'Frizer')]";
 	public static final String meniSminka = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'minka')]";
 	public static final String meniTrepavice = "//ul[@id='menu-glavni-meni-1']//li[@class='menu-trepavice menu-item-26']";
 	public static final String meniManikir = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'Manikir')]";
@@ -111,6 +112,24 @@ public class Ana_usluge {
 
 	public static void clickFootKontakt(WebDriver driver) {
 		getFootKontakt(driver).click();
+	}
+
+	// MeniUsluge:
+	public static WebElement getUsluge(WebDriver driver) {
+		return driver.findElement(By.xpath(usluge));
+	}
+
+	public static void clickUsluge(WebDriver driver) {
+		getUsluge(driver).click();
+	}
+
+	// MeniFrizer:
+	public static WebElement getMeniFrizer(WebDriver driver) {
+		return driver.findElement(By.xpath(meniFrizer));
+	}
+
+	public static void clickMeniFrizer(WebDriver driver) {
+		getMeniFrizer(driver).click();
 	}
 
 	// MeniSminka:
