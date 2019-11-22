@@ -6,12 +6,16 @@ import org.openqa.selenium.WebElement;
 
 public class Ana_pocetna {
 	public static final String URL = "https://www.salonana-dm.com";
-	public static final String oNama = "//*[@id=\"menu-glavni-meni-1\"]/li[2]/a/span";
-	public static final String usluge = "";
-	public static final String galerija = "//*[@id=\"menu-glavni-meni-1\"]/li[4]/a/span";
-	public static final String kontakt = "//*[@id=\"menu-glavni-meni-1\"]/li[5]/a/span";
-	public static final String slajdDesno = "//*[@id=\"imageslider\"]/div/ul[2]/li[2]/a";
-	public static final String slajdLevo = "//*[@id=\"imageslider\"]/div/ul[2]/li[1]/a";
+	public static final String oNama = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'O nama')]";
+	public static final String meniFrizer = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'Frizer')]";
+	public static final String galerija = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'Galerija')]";
+	public static final String kontakt = "//li[@class='menu-kontakt menu-item-37 sfHover']//span[contains(text(),'Kontakt')]";
+	public static final String slajdDesno = "//a[@class='flex-next']";
+	public static final String slajdLevo = "//a[@class='flex-prev']";
+	public static final String slajdT1 = "//a[contains(text(),'1')]";
+	public static final String slajdT2 = "//a[contains(text(),'2')]";
+	public static final String slajdT3 = "//a[contains(text(),'3')]";
+	public static final String slajdT4 = "//a[contains(text(),'4')]";
 	public static final String slikaFrizer = "//div[@class='elementor-element elementor-element-643e84e elementor-widget elementor-widget-image']//img";
 	public static final String slikaSminka = "//div[@class='elementor-element elementor-element-2eaaf0e elementor-widget elementor-widget-image']//img";
 	public static final String slikaTrepavice = "//div[@class='elementor-element elementor-element-b21ee4b elementor-widget elementor-widget-image']//img";
@@ -38,6 +42,96 @@ public class Ana_pocetna {
 
 	public static void clickSlajdLevo(WebDriver driver) {
 		getSlajdLevo(driver).click();
+	}
+
+	// Slajd T1:
+	public static WebElement getSlajdT1(WebDriver driver) {
+		return driver.findElement(By.xpath(slajdT1));
+	}
+
+	public static void clickSlajdT1(WebDriver driver) {
+		getSlajdT1(driver).click();
+	}
+
+	// Slajd T2:
+	public static WebElement getSlajdT2(WebDriver driver) {
+		return driver.findElement(By.xpath(slajdT2));
+	}
+
+	public static void clickSlajdT2(WebDriver driver) {
+		getSlajdT2(driver).click();
+	}
+
+	// Slajd T3:
+	public static WebElement getSlajdT3(WebDriver driver) {
+		return driver.findElement(By.xpath(slajdT3));
+	}
+
+	public static void clickSlajdT3(WebDriver driver) {
+		getSlajdT3(driver).click();
+	}
+
+	// Slajd T4:
+	public static WebElement getSlajdT4(WebDriver driver) {
+		return driver.findElement(By.xpath(slajdT4));
+	}
+
+	public static void clickSlajdT4(WebDriver driver) {
+		getSlajdT4(driver).click();
+	}
+
+	// Slika frizer:
+	public static WebElement getSlikaFrizer(WebDriver driver) {
+		return driver.findElement(By.xpath(slikaFrizer));
+	}
+
+	public static void clickSlikaFrizer(WebDriver driver) {
+		getSlikaFrizer(driver).click();
+	}
+
+	// Slika sminka:
+	public static WebElement getSlikaSminka(WebDriver driver) {
+		return driver.findElement(By.xpath(slikaSminka));
+	}
+
+	public static void clickSlikaSminka(WebDriver driver) {
+		getSlikaSminka(driver).click();
+	}
+
+	// Slika Trepavice:
+	public static WebElement getSlikaTrepavice(WebDriver driver) {
+		return driver.findElement(By.xpath(slikaTrepavice));
+	}
+
+	public static void clickSlikaTrepavice(WebDriver driver) {
+		getSlikaTrepavice(driver).click();
+	}
+
+	// Slika Manikir:
+	public static WebElement getSlikaManikir(WebDriver driver) {
+		return driver.findElement(By.xpath(slikaManikir));
+	}
+
+	public static void clickSlikaManikir(WebDriver driver) {
+		getSlikaManikir(driver).click();
+	}
+
+	// Slika Depilacija:
+	public static WebElement getSlikaDepilacija(WebDriver driver) {
+		return driver.findElement(By.xpath(slikaDepilacija));
+	}
+
+	public static void clickSlikaDepilacija(WebDriver driver) {
+		getSlikaDepilacija(driver).click();
+	}
+
+	// Slika Masaza:
+	public static WebElement getSlikaMasaza(WebDriver driver) {
+		return driver.findElement(By.xpath(slikaMasaza));
+	}
+
+	public static void clickSlikaMasaza(WebDriver driver) {
+		getSlikaMasaza(driver).click();
 	}
 
 	// O nama:
