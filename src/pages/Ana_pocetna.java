@@ -9,7 +9,7 @@ public class Ana_pocetna {
 	public static final String oNama = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'O nama')]";
 	public static final String meniFrizer = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'Frizer')]";
 	public static final String galerija = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'Galerija')]";
-	public static final String kontakt = "//li[@class='menu-kontakt menu-item-37 sfHover']//span[contains(text(),'Kontakt')]";
+	public static final String kontakt = "//ul[@id='menu-glavni-meni-1']//span[contains(text(),'Kontakt')]";
 	public static final String slajdDesno = "//a[@class='flex-next']";
 	public static final String slajdLevo = "//a[@class='flex-prev']";
 	public static final String slajdT1 = "//a[contains(text(),'1')]";
@@ -141,6 +141,15 @@ public class Ana_pocetna {
 
 	public static void clickONama(WebDriver driver) {
 		getONama(driver).click();
+	}
+
+	// Galerija:
+	public static WebElement getGalerija(WebDriver driver) {
+		return driver.findElement(By.xpath(galerija));
+	}
+
+	public static void clickGalerija(WebDriver driver) {
+		getGalerija(driver).click();
 	}
 
 	// Kontakt:

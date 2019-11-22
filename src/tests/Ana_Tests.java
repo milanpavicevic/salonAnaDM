@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import pages.Ana_galerija;
 import pages.Ana_kontakt;
 import pages.Ana_oNama;
 import pages.Ana_pocetna;
@@ -64,7 +65,7 @@ public class Ana_Tests {
 		Thread.sleep(1500);
 		Ana_usluge.clickFootPocetna(driver);
 		Thread.sleep(3000);
-		
+
 		Actions hoverUsluge = new Actions(driver);
 		WebElement dropUsluge = driver.findElement(By.xpath(usluge));
 		hoverUsluge.moveToElement(dropUsluge).perform();
@@ -79,11 +80,31 @@ public class Ana_Tests {
 		Ana_usluge.clickMeniDepilacija(driver);
 		Ana_usluge.clickUsluge(driver);
 		Ana_usluge.clickMeniMasaza(driver);
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
-//		Ana_pocetna.clickKontakt(driver);
-//		
-//		Ana_kontakt.clickLogo(driver);
+		driver.get(Ana_pocetna.URL);
+		Ana_pocetna.clickGalerija(driver);
+		Ana_galerija.clickSlika1(driver);
+		for(int i = 0; i<=8; i++) {
+			Ana_galerija.clickSledecaSlika(driver);
+			Thread.sleep(1500);
+		}
+		Ana_galerija.clickZatvoriGaleriju(driver);
+		Ana_galerija.clickIzadjiIzGalerije(driver);
+		Thread.sleep(1500);
+		Ana_galerija.clickSlika20(driver);
+		for(int i = 0; i<=8; i++) {
+			Ana_galerija.clickPrethodnaSlika(driver);
+			Thread.sleep(1500);
+		}
+		Ana_galerija.clickZatvoriGaleriju(driver);
+		Ana_galerija.clickIzadjiIzGalerije(driver);
+		Thread.sleep(2000);
+		driver.get(Ana_pocetna.URL);
+
+		Ana_pocetna.clickKontakt(driver);
+		
+		Ana_kontakt.clickLogo(driver);
 
 		Actions acs = new Actions(driver);
 		Action a = acs.build();
