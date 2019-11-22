@@ -22,8 +22,6 @@ public class Ana_pocetna {
 	public static final String slikaManikir = "//div[@class='elementor-element elementor-element-501cae9 elementor-widget elementor-widget-image']//img";
 	public static final String slikaDepilacija = "//div[@class='elementor-element elementor-element-072d632 elementor-widget elementor-widget-image']//img";
 	public static final String slikaMasaza = "//div[@class='elementor-element elementor-element-8e0c825 elementor-widget elementor-widget-image']//img";
-	public static final String facebook = "//i[@class='fab fa-facebook']";
-	public static final String instagram = "//i[@class='fab fa-instagram']";
 	public static final String toTop = "//*[@id=\"topcontrol\"]/div/div";
 
 	// Slajd desno:

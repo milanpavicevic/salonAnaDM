@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
 import pages.Ana_galerija;
 import pages.Ana_kontakt;
@@ -89,6 +88,7 @@ public class Ana_Tests {
 			Ana_galerija.clickSledecaSlika(driver);
 			Thread.sleep(1500);
 		}
+		Thread.sleep(1500);
 		Ana_galerija.clickZatvoriGaleriju(driver);
 		Ana_galerija.clickIzadjiIzGalerije(driver);
 		Thread.sleep(1500);
@@ -97,14 +97,17 @@ public class Ana_Tests {
 			Ana_galerija.clickPrethodnaSlika(driver);
 			Thread.sleep(1500);
 		}
+		Thread.sleep(1500);
 		Ana_galerija.clickZatvoriGaleriju(driver);
 		Ana_galerija.clickIzadjiIzGalerije(driver);
 		Thread.sleep(2000);
 		driver.get(Ana_pocetna.URL);
 
 		Ana_pocetna.clickKontakt(driver);
-		
-		Ana_kontakt.clickLogo(driver);
+		Ana_kontakt.clickFacebook(driver);
+		Thread.sleep(5000);
+		Ana_kontakt.clickInstagram(driver);
+		Thread.sleep(5000);
 
 		Actions acs = new Actions(driver);
 		Action a = acs.build();
